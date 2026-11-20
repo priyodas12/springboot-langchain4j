@@ -1,0 +1,119 @@
+# =========================================================
+# Spring Boot + LangChain4j (Java / Maven) .gitignore
+# =========================================================
+
+### Secrets and credentials ###
+mvnw
+mvnw.cmd
+.mvn
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+id_rsa*
+id_ed25519*
+*.secret
+secrets.*
+credentials*
+service-account*.json
+.npmrc
+.pypirc
+.netrc
+.aws/
+.ssh/
+*.tfvars
+terraform.tfstate*
+application-local.*
+application-secret.*
+config/secrets*
+
+### Claude Code (local settings) ###
+.claude/settings.local.json
+
+### Java / Maven ###
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+dependency-reduced-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+buildNumber.properties
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+### Gradle (if ever used) ###
+.gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Other build output ###
+dist/
+out/
+bin/
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+*.ipr
+
+### Eclipse / STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+nbproject/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+
+### VS Code / other editors ###
+.vscode/
+.fleet/
+.vs/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+### OS files ###
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### Cache and temp ###
+.cache/
+tmp/
+temp/
+*.tmp
+
+### Logs and coverage ###
+*.log
+logs/
+coverage/
+*.exec
+
+### Project-specific (preserved) ###
+HELP.md
