@@ -3,9 +3,6 @@
 # =========================================================
 
 ### Secrets and credentials ###
-mvnw
-mvnw.cmd
-.mvn/
 .env
 .env.*
 !.env.example
@@ -40,8 +37,6 @@ config/secrets*
 target/
 !**/src/main/**/target/
 !**/src/test/**/target/
-.mvn/wrapper/maven-wrapper.jar
-.mvn/timing.properties
 dependency-reduced-pom.xml
 pom.xml.tag
 pom.xml.releaseBackup
@@ -56,6 +51,11 @@ buildNumber.properties
 *.nar
 hs_err_pid*
 replay_pid*
+
+### Maven wrapper (not used: build with an installed `mvn`) ###
+mvnw
+mvnw.cmd
+.mvn/
 
 ### Gradle (if ever used) ###
 .gradle/

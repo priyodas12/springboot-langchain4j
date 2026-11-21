@@ -1,3 +1,21 @@
 spring:
   application:
     name: springboot-langchain4j
+
+logging:
+  pattern:
+    # Adds the per-chat UUIDv7 and the session id (from the MDC) to every log line
+    correlation: "[chatId=%X{chatId:-} sessionId=%X{sessionId:-}] "
+
+anthropic:
+  # Never commit the key: export ANTHROPIC_API_KEY=... (or put it in the git-ignored application-local.yaml)
+  api-key: ${ANTHROPIC_API_KEY}
+  model-name: ${ANTHROPIC_MODEL_NAME}
+  # low | medium | high | xhigh | max  (low/medium suit chat; higher = deeper reasoning, more tokens)
+  effort: medium
+  max-tokens: 16000            # blocking /api/chat
+  streaming-max-tokens: 64000  # /api/chat/stream
+  memory-max-messages: 40      # per-session conversation window
+  timeout: 5m
+  log-requests: false
+  log-responses: false
